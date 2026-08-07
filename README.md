@@ -20,8 +20,9 @@
 </p>
 
 <p align="center">
-  <a href="#overview">Overview</a> &bull;
-  <a href="#compatibility">Compatibility</a> &bull;
+  <a href="#what-it-does">What it does</a> &bull;
+  <a href="#how-to-use">How to use</a> &bull;
+  <a href="#commands-and-permissions">Commands</a> &bull;
   <a href="#install">Install</a> &bull;
   <a href="https://github.com/TheNINJALLO/endstone-auto-mine/releases">Releases</a>
 </p>
@@ -30,9 +31,23 @@
 
 AFK auto-mining plugin with tool and enchantment support. This release is aligned with Endstone 0.11.8 and Minecraft Bedrock Dedicated Server 1.26.40, and is distributed as a Python wheel for direct installation in an Endstone server.
 
-## Capabilities
+## What it does
 
--
+- Mines a cuboid selection layer by layer while the player remains online.
+- Uses the held pickaxe, respects durability and supported enchantments, and reports live progress.
+- Stops safely when requested or when the session can no longer continue.
+
+## How to use
+
+1. Grant access with the vanilla command `/tag <player> add automine`.
+2. Have the player hold a pickaxe and run `/automine` with two opposite corners of the target cuboid.
+3. Check progress with `/automine status` and end the job with `/automine stop`.
+
+## Commands and permissions
+
+| Command / usage | What it does | Access |
+|---|---|---|
+| `/automine <x1: int> <y1: int> <z1: int> <x2: int> <y2: int> <z2: int>`<br>`/automine stop`<br>`/automine status` | Auto-mine an area using your pickaxe | Scoreboard tag `automine` |
 
 ## Compatibility
 
