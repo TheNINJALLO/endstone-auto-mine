@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "endstone-auto-mine"
+version = "1.1.3"
+description = "AFK auto-mining plugin with tool and enchantment support"
+requires-python = ">=3.10"
+dependencies = ["endstone>=0.11.8,<0.12"]
+
+[project.entry-points."endstone"]
+auto-mine = "endstone_automine:AutoMinePlugin"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["endstone_automine"]
